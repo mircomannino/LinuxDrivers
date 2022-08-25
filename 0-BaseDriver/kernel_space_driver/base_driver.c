@@ -1,13 +1,15 @@
-#include <linux/init.h>
-#include <linux/module.h>
-#include <linux/kernel.h>   /* printk() */
-#include <linux/slab.h>     /* kmalloc() */
-#include <linux/fs.h>       /* everything... */
 #include <linux/errno.h>    /* error codes */
-#include <linux/types.h>    /* size_t */
-#include <linux/proc_fs.h>
 #include <linux/fcntl.h>    /* O_ACCMODE */
-#include <asm/uaccess.h>    /* copy_from/to_user */
+#include <linux/fs.h>       /* file manipulation stuff */
+#include <linux/init.h>
+#include <linux/kernel.h>   /* printk */
+#include <linux/mm.h>       /* mmap stuff */
+#include <linux/module.h>
+#include <linux/proc_fs.h>
+#include <linux/slab.h>     /* kmalloc */
+#include <linux/sched.h>    /* task_struct* current */
+#include <linux/types.h>    /* size_t */
+#include <linux/uaccess.h>  /* copy_from/to_user */
 
 #include <linux/version.h>
 #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,15)
@@ -64,7 +66,7 @@ int base_driver_init(void)
     printk("<1>base_driver: Adding the module\n");
     printk("<1>base_driver: set buffer to\n");
     printk("<1>START\n");
-    size_t i = 0; 
+    size_t i; 
     for(i = 0; i < SIZE; i++) printk("<1>%d\n", base_driver_buffer[i]);
     printk("<1>END\n");
     return 0; 
