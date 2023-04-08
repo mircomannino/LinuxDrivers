@@ -1,0 +1,1 @@
+cmd_/home/mirco/Scrivania/PhD/1-Programming/LinuxDrivers/chapter2/0-skeleton/skeleton.mod := { echo  /home/mirco/Scrivania/PhD/1-Programming/LinuxDrivers/chapter2/0-skeleton/skeleton.o;  echo; } > /home/mirco/Scrivania/PhD/1-Programming/LinuxDrivers/chapter2/0-skeleton/skeleton.mod

@@ -1,0 +1,2 @@
+/home/mirco/Scrivania/PhD/1-Programming/LinuxDrivers/chapter2/0-skeleton/skeleton.o
+
